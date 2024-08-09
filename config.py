@@ -65,6 +65,10 @@ if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
 else:
     DISABLE_CHANNEL_BUTTON = False
 
+# Add Link2Paisa API key and Log Channel ID // you need this
+LINK2PAISA_API_KEY = os.environ.get("LINK2PAISA_API_KEY", "ab0ae06cd4f5f1491ee66a25cf627c799f9cf120")
+LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1002145073728"))
+
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "🚫Pʟᴇᴀꜱᴇ ᴅᴏɴ'ᴛ ᴍᴇꜱꜱᴀɢᴇ ᴍᴇ ᴅɪʀᴇᴄᴛʟʏ ɪ ᴀᴍ ᴏɴʟʏ ᴡᴏʀᴋ ꜰᴏʀ​ - @Anime_X_Hunters"
 
