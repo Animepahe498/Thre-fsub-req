@@ -6,6 +6,30 @@ from bot import Bot
 from config import ADMINS, LINK2PAISA_API_KEY, LOG_CHANNEL_ID
 from helper_func import encode, get_message_id
 
+# Function to shorten URLs using Link2Paisa API
+def shorten_url(original_url, alias=None):
+    api_url = "https://publicearn.com/api"
+    params = {
+        "api": LINK2PAISA_API_KEY,
+        "url": original_url,
+        "alias": alias,
+        "format": "json"
+    }
+
+    response = requests.get(api_url, params=params)
+
+    if response.status_code == 200:
+        result = response.json()
+        if result["status"] == "success":
+            shortened_url = result["shortenedUrl"]
+            return shortened_url
+        else:
+            Bot.send_message(chat_id=LOG_CHANNEL_ID, text=f"Error shortening URL: {result.get('message', 'Unknown error')}")
+            return original_url
+    else:
+        Bot.send_message(chat_id=LOG_CHANNEL_ID, text=f"HTTP Error: {response.status_code}")
+        return original_url
+        
 @Bot.on_message(filters.private & filters.user(ADMINS) & filters.command('batch'))
 async def batch(client: Client, message: Message):
     while True:
