@@ -28,7 +28,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "sukuna998")
 
 # Put 0 on on that which you don't want to enable
 FORCE_CHANNEL = int(os.environ.get("FORCE_CHANNEL", "-1002044619047"))
-FORCE_CHANNEL2 = int(os.environ.get("FORCE_CHANNEL2", "0"))
+FORCE_CHANNEL2 = int(os.environ.get("FORCE_CHANNEL2", "-1002196502250"))
 REQUEST_CHANNEL = int(os.environ.get("REQUEST_CHANNEL", "-1002150655465"))
 
 #TXT
@@ -66,8 +66,8 @@ else:
     DISABLE_CHANNEL_BUTTON = False
 
 # Add Link2Paisa API key and Log Channel ID // you need this
-LINK2PAISA_API_KEY = os.environ.get("LINK2PAISA_API_KEY", "")
-LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", ""))
+LINK2PAISA_API_KEY = os.environ.get("LINK2PAISA_API_KEY", "e880775b72897547a4619a1d4fabd4e0eec2cddc")
+LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1002196502250"))
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "🚫Pʟᴇᴀꜱᴇ ᴅᴏɴ'ᴛ ᴍᴇꜱꜱᴀɢᴇ ᴍᴇ ᴅɪʀᴇᴄᴛʟʏ ɪ ᴀᴍ ᴏɴʟʏ ᴡᴏʀᴋ ꜰᴏʀ​ - @Anime_X_Hunters"
