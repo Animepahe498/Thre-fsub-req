@@ -14,22 +14,22 @@ APP_ID = int(os.environ.get("APP_ID", "23902408"))
 API_HASH = os.environ.get("API_HASH", "6a36a4ef2f07d63aeba7b53b99c64d73")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002238449892"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "5090651635"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "7179837246"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "0")
-DB_NAME = os.environ.get("DATABASE_NAME", "nanimer855")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://mex:rex@cluster7.jrzowqz.mongodb.net/?retryWrites=true&w=majority")
+DB_NAME = os.environ.get("DATABASE_NAME", "sukuna998")
 
 # Put 0 on on that which you don't want to enable
-FORCE_CHANNEL = int(os.environ.get("FORCE_CHANNEL", "0"))
+FORCE_CHANNEL = int(os.environ.get("FORCE_CHANNEL", "-1002044619047"))
 FORCE_CHANNEL2 = int(os.environ.get("FORCE_CHANNEL2", "0"))
-REQUEST_CHANNEL = int(os.environ.get("REQUEST_CHANNEL", "0"))
+REQUEST_CHANNEL = int(os.environ.get("REQUEST_CHANNEL", "-1002150655465"))
 
 #TXT
 HELP_TXT = "<b><i>Hi Dude!\nI am a File Sharing Bot\n\nTo use this bot you just have to join both channels that's it..\nDeveloper - <a href=https://t.me/Okabe_xRintarou>Clickhere</a></i></b>"
@@ -45,7 +45,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "<b>ʜɪ ᴛʜᴇʀᴇ... {first}! 💥\n\nɪ ᴀᴍ ᴀ ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʙᴏᴛ...!\nɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴘʀɪᴠᴀᴛᴇ ꜰɪʟᴇꜱ ᴛʜʀᴏᴜɢʜ ᴀ ꜱᴘᴇᴄɪꜰɪᴄ ʟɪɴᴋ....!\nᴘᴏᴡᴇʀᴇᴅ ʙʏ - @Anime_X_Hunters</b>")
 try:
     ADMINS=[5090651635]
-    for x in (os.environ.get("ADMINS", "5090651635").split()):
+    for x in (os.environ.get("ADMINS", "7179837246").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -66,8 +66,8 @@ else:
     DISABLE_CHANNEL_BUTTON = False
 
 # Add Link2Paisa API key and Log Channel ID // you need this
-LINK2PAISA_API_KEY = os.environ.get("LINK2PAISA_API_KEY", "ab0ae06cd4f5f1491ee66a25cf627c799f9cf120")
-LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", "-1002145073728"))
+LINK2PAISA_API_KEY = os.environ.get("LINK2PAISA_API_KEY", "")
+LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", ""))
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "🚫Pʟᴇᴀꜱᴇ ᴅᴏɴ'ᴛ ᴍᴇꜱꜱᴀɢᴇ ᴍᴇ ᴅɪʀᴇᴄᴛʟʏ ɪ ᴀᴍ ᴏɴʟʏ ᴡᴏʀᴋ ꜰᴏʀ​ - @Anime_X_Hunters"
@@ -78,7 +78,7 @@ DEL_TIMER = int(os.environ.get("DEL_TIMER", "600"))
 DEL_MSG = "<b>This message will be deleted automatically in {time}. Forward it to your saved messages..!</b>"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5090651635)
+ADMINS.append(7179837246)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
